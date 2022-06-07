@@ -1,9 +1,10 @@
-const awsServerlessExpress = require('aws-serverless-express');
-const app = require('./app');
+const awsServerlessExpress = require("aws-serverless-express");
+const app = require("./app");
 
 const server = awsServerlessExpress.createServer(app);
 
+// the following runs when Lambda is invoked
 exports.handler = (event, context) => {
   console.log(`EVENT: ${JSON.stringify(event)}`);
-  return awsServerlessExpress.proxy(server, event, context, 'PROMISE').promise;
+  return awsServerlessExpress.proxy(server, event, context, "PROMISE").promise;
 };
