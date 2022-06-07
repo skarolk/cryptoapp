@@ -43,4 +43,5 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 amplify/team-provider-info.json
+amplify/backend/function/cryptofunction/cryptofunction-cloudformation-template.json
 #amplify-do-not-edit-end
